@@ -1,0 +1,121 @@
+# section information
+section:
+  name: Education
+  id: education
+  template: sections/education.html # Use "sections/education-alt.html for alternate template.
+  enable: true
+  weight: 4
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+degrees:
+- name: Registered Practitioner (RP)
+  icon: fa-cloud
+  timeframe: "December 2020"
+  institution:
+    name: CMMC Accreditation Body
+    url: "https://portal.cmmcab.org/marketplace/jacob-henson//"
+  takenCourses: #(optional)
+    # if true, the courses will be rendered as a table otherwise it will render as a list and the grades will be hidden.
+    showGrades: false
+    courses:
+    - name: Cybersecurity Maturity Model Certification
+    - name: Assessments
+
+# - name: AWS Certified Cloud Practitioner
+#   icon: fa-cloud
+#   timeframe: "September 2020"
+#   institution:
+#     name: Amazon Web Services
+#     url: "https://aws.amazon.com/training/"
+#   takenCourses: #(optional)
+#     # if true, the courses will be rendered as a table otherwise it will render as a list and the grades will be hidden.
+#     showGrades: false
+#     courses:
+#     - name: AWS Cloud architectural principles
+#     - name: AWS Cloud value proposition
+
+# - name: Offensive Security Certified Professional (OSCP)
+#   icon: fa-robot
+#   timeframe: "March 2020"
+#   institution:
+#     name: Offensive Security
+#     url: "https://www.offensive-security.com/"
+#   takenCourses: #(optional)
+#     # if true, the courses will be rendered as a table otherwise it will render as a list and the grades will be hidden.
+#     showGrades: false
+#     courses:
+#     - name: Active Information Gathering
+#     - name: Vulnerability Scanning
+#     - name: Web Application Attacks
+#     - name: Buffer Overflows
+
+# - name: Penetration Testing Course Advanced+
+#   icon: fa-bomb
+#   timeframe: "October 2019"
+#   institution:
+#     name: Virtual Hacking Labs
+#     url: "https://aws.amazon.com/training/"
+#   takenCourses: #(optional)
+#     # if true, the courses will be rendered as a table otherwise it will render as a list and the grades will be hidden.
+#     showGrades: false
+#     courses:
+#     - name: AWS Cloud architectural principles
+#     - name: AWS Cloud value proposition
+
+# - name: Penetration Testing Course
+#   icon: fa-terminal
+#   timeframe: "October 2019"
+#   institution:
+#     name: Virtual Hacking Labs
+#     url: "https://aws.amazon.com/training/"
+#   takenCourses: #(optional)
+#     # if true, the courses will be rendered as a table otherwise it will render as a list and the grades will be hidden.
+#     showGrades: false
+#     courses:
+#     - name: AWS Cloud architectural principles
+#     - name: AWS Cloud value proposition
+
+# - name: Cybersecurity Analyst (CySA+)
+#   icon: fa-bug
+#   timeframe: "May 2019"
+#   institution:
+#     name: CompTIA 
+#     url: "https://www.comptia.org/certifications/cybersecurity-analyst"
+#   takenCourses: #(optional)
+#     # if true, the courses will be rendered as a table otherwise it will render as a list and the grades will be hidden.
+#     showGrades: false
+#     courses:
+#     - name: Cybersecurity Architecture
+#     - name: Threat Intelligence
+
+# - name: Certified Information Systems Security Professional (CISSP)
+#   icon: fa-certificate
+#   timeframe: "November 2016"
+#   institution:
+#     name: ISC2
+#     url: "https://www.isc2.org/Certifications/CISSP"
+#   takenCourses: #(optional)
+#     # if true, the courses will be rendered as a table otherwise it will render as a list and the grades will be hidden.
+#     showGrades: false
+#     courses:
+#     - name: Risk Management
+#     - name: Business Continuity
+
+- name: Bachelor of Computer Science
+  icon: fa-graduation-cap
+  timeframe: "May 2005"
+  institution:
+    name: Auburn University
+    url: "http://www.auburn.edu"
+  takenCourses: #(optional)
+    # if true, the courses will be rendered as a table otherwise it will render as a list and the grades will be hidden.
+    showGrades: false
+    courses:
+    - name: Data Structures and Algorithm
+    - name: Network Security
+    - name: Artificial Intelligent
+    - name: Operating System
+
+

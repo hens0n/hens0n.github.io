@@ -1,0 +1,116 @@
+# section information
+section:
+  name: Experiences
+  id: experiences
+  enable: true
+  weight: 3
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true 
+
+# Your experiences
+experiences:
+- company:
+    name: VikTech
+    url: "http://www.viktech.net"
+    location: Redstone Arsenal
+    # company overview
+    overview: VIKTech is a small minority owned business that was founded in 2007 with the sole mission to innovate and deliver the complete range of Information Technology support to enable mission and ensure customer success.
+  positions:
+  - designation: Senior Cybersecurity Consultant
+    start: Apr 2019
+    # don't provide end date if you are currently working there. It will be replaced by "Present"
+    # end: Dec 2020
+    # give some points about what was your responsibilities at the company.
+    responsibilities:
+    - Serve as Computer Network Defense(CND) Contractor Lead for a MDA Directorate.
+    - Work with multiple teams to report and address compliance and information assurance vulnerability management (IAVM) findings.
+    - alidate vulnerability assessments, artifacts in eMASS, ePO and ACAS and make a recommendation to address findings.
+    - Coordinate with multiple teams to track, document, and respond to incidents.
+    - Support Risk Management Framework (RMF) Assessment and Authorization (A&A) processes in our team.
+    - Maintain CND Strategic Plans, Policies, Procedures.
+
+
+
+- company:
+    name: HII Technical Solutions
+    url: "https://tsd.huntingtoningalls.com/"
+    location: Huntsville Alabama
+    overview: Comprising nearly 6,000 professionals in 45 states and 16 countries, Huntington Ingalls Industries' Technical Solutions division is a professional services business providing mission-critical solutions to a wide variety of government and commercial customers worldwide.
+  positions:
+  - designation: Chief Information Security Officer (CISO)
+    start: Feb 2016
+    end: Apr 2019
+    responsibilities:
+    - Directed the Cybersecurity Program and Risk Management that includes the Risk Management Framework (RFM) supporting multiple entities in a global division.
+    - Team Lead for the division's Incident Response Team.  As the lead, I am responsible for coordinating with multiple departments bring an incident to closure.  Provide written and verbal briefings and presentations to business leaders about incidents.
+    - Directed IT governance for the division that aligns with HII, compliance frameworks (e.g., ISO 9001, ISO 20000, and NIST SP 800-171), and contractual requirements (e.g., DFARS 252.204-7012) to align with business objectives.  Advise senior leadership on governance, risk management, and regulatory compliance requirements.
+    - Develop a division-wide Vulnerability Management Program.   My team developed governance and processes to reduce the number of vulnerabilities across the division.   The program requires interfacing with multiple business units, application owners, and stakeholders to remediate vulnerabilities.
+    - Lead the implementation of Multi-Factor Authentication across the various organization in the division.  Managed the initial distribution and developing procedures for continued distribution for future users.  My team distributed to CONUS and OCONUS users in than more 70 locations.
+
+  - designation: Information Assurances and Cybersecurity and ISSM
+    start: Feb 2014
+    end: Feb 2016
+    responsibilities:
+    - Developed, implemented, and maintained Business Continuity and Disaster Recovery Policies and Procedures.
+    - Managed process and acted in the lead role for Computer Incident Response Team (CIRT). Perform forensics on compromised machines and networks, malware analysis and reporting relating to security incidents.
+    - Install, maintain, and manage security technologies including FireEye NX, Carbon Black Enterprise Response, Carbon Black Enterprise Protection (Bit9), Splunk, Elastic, Logstash, Kabana, Encase, Nessus, and Suricata.
+    - Recommended preventive, mitigating, and compensating controls to ensure the appropriate level of protection and adherence to the goals of the overall information security strategy.
+    - Configure and Administer BMC Footprints to support our ISO 20000 requirements
+    - Developed and maintain corporate information security and privacy policies.
+    - Prepare Information System Security Plans, Protection Profiles (SSPs and MSSPs). Interface with the Defense Security Service (DSS) concerning Security Plan approvals for handling, safeguarding, transmitting, receiving, and generating classified information.
+    - Manage COMSEC material and accounts.
+
+  - designation: Manager of Business Systems and ISSO
+    start: May 2006
+    end: Feb 2014
+    responsibilities:
+    - Prepare Information System Security Plans, Protection Profiles (SSPs and MSSPs). Interface with the Defense Security Service (DSS) concerning Security Plan approvals for handling, safeguarding, transmitting, receiving, and generating classified information.
+    - Manage COMSEC material and accounts.
+    - Designed, develop requirements, development, debug many internal systems to integrate different business systems.  (Websites, Restful APIs, and Services)
+    - Install, support, and operate many business systems including Microsoft SharePoint, Microsoft SQL, Deltek (Costpoint, Budget, and Planning, Govwin, Time and Expense), Privia, Team Foundation Server and GitHub Enterprise.
+    - Install, support, and operate cybersecurity technologies including FireEye NX, Carbon Black Enterprise Response, Carbon Black Enterprise Protection (Bit9), Snort, Cuckoo Sandbox, and Splunk (dashboards, reports, custom search commands).
+    - Provide support and recommendations to HIPAA security assessment and audit. Draft documentation support to ISO 9000, ISO 20000.
+
+
+- company:
+    name: College of Business at Auburn University
+    url: "http://harbert.auburn.edu/"
+    location: Auburn Alabama
+    overview: The Raymond J. Harbert College of Business is located on the Auburn University campus in the vibrant city of Auburn, Alabama.
+  positions:
+  - designation: Developer
+    start: Jan 2004
+    end: May 2006
+    responsibilities:
+    - Web Developer and Database Administrator
+    - Responsible for maintaining the College of Business IT infrastructure, and the design of new web-based applications to aid the College of Business in everyday tasks, including the web-based scholarship application process and an online software request form.
+    - Provided various IT services to the College of Business staff including web surveys, database support, and personal site maintenance.
+    - Provided custom IT support as needed to assist the College of Business staff.
+
+
+- company:
+    name: Commerce Networks
+    url: "#"
+    location: Auburn Alabama
+    overview: Commerce Networks, headquartered in Auburn, Alabama, services businesses everywhere from startup companies to multimillion dollar corporations.
+  positions:
+  - designation: Development
+    start: Aug 2001
+    end: Jan 2004
+    responsibilities:
+    - Developed custom dynamic web applications to meet customer’s requirements.
+
+- company:
+    name: Byte-Me Computers
+    url: "#"
+    location: Intern Land
+    overview: Intern counting Company (ICC) is responsible for counting worldwide intern Engineers.
+  positions:
+  - designation: Technician
+    start: Jan 1995
+    end: Aug 1999
+    responsibilities:
+    - Provided custom IT and computer resource design, development, testing, and integration. 
+    - IT Help Desk Support and real-time troubleshooting of IT architectures.
+    - Operation System and Software maintenance, upgrades, custom configuration setups, cybersecurity software for penetration and snooping prevention.

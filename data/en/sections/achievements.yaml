@@ -1,0 +1,30 @@
+# section information
+section:
+  name: Achievements
+  id: achievements
+  enable: false
+  weight: 7
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# Your achievements achievements
+achievements:
+- title: AWS Certified Cloud Practitioner
+  image: /images/sections/achievements/AWS-CloudPractitioner.png
+  summary: Achieved the AWS Certified Cloud Practitioner certification.
+- title: OSCP
+  image: /images/sections/achievements/oscp.jpg
+  summary: Completed the Penetration Testing with Kali Linux (PWK) course and achieved the Offensive Security Certified Professional (OSCP) certification.
+- title: CySA+
+  image: /images/sections/achievements/cysa.png
+  summary: Best presenter in the 2020 XYZ conference.
+- title: VHL+
+  image: /images/sections/achievements/vhl_plus.png
+  summary: Completed Virtual Hacking Lab Penetration Testing course and achieved the VHL PENETRATION TESTING COURSE ADVANCED+ certificate.
+- title: VHL
+  image: /images/sections/achievements/vhl.png
+  summary: Completed Virtual Hacking Lab Penetration Testing course and achieved the VHL PENETRATION TESTING COURSE certificate.
+- title: CISSP
+  image: /images/sections/achievements/cissp.jpg
+  summary: Achieved the Certified Information Systems Security Professional (CISSP) certification.
