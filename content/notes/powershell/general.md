@@ -11,17 +11,10 @@ menu:
     weight: 10
 ---
 
-<!-- Variable -->
-{{< note title="Variable" >}}
 
-```bash
-New-Object System.Math
-```
 
-{{< /note >}}
-
-<!-- Condition -->
-{{< note title="Condition" >}}
+<!-- Start Powershell -->
+{{< note title="Start Powershell" >}}
 
 ```bash
 powershell.exe -nop -exec bypass
