@@ -1,7 +1,7 @@
 ---
 title: "Powershell"
 date: 2022-05-17T15:02:44-05:00
-draft: true
+draft: false
 weight: 210
 menu:
   notes:
@@ -24,11 +24,7 @@ New-Object System.Math
 {{< note title="Condition" >}}
 
 ```bash
-if [[ -z "$string" ]]; then
-  echo "String is empty"
-elif [[ -n "$string" ]]; then
-  echo "String is not empty"
-fi
+powershell.exe -nop -exec bypass
 ```
 
 {{< /note >}}

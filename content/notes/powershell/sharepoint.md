@@ -1,7 +1,7 @@
 ---
 title: "Sharepoint"
 date: 2022-05-17T15:03:53-05:00
-draft: true
+draft: false
 weight: 210
 menu:
   notes:
