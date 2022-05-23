@@ -73,32 +73,32 @@ badges:
 - type: certification
   name: Certified Information Systems Security Professional (CISSP)
   url: "https://www.credly.com/badges/3aacceb5-3da7-4117-ad22-793c0ca38174"
-  badge: "/images/sections/about/isc2_cissp2.png"
+  badge: "/sections/about/isc2_cissp2.png"
 
 - type: certification
   name: Offensive Security Certified Professional (OSCP)
   url: "https://www.credly.com/badges/fc4ab3d0-1183-476a-9a6f-b8ccd2f0fef1"
-  badge: "/images/sections/about/oscp.png"
+  badge: "/sections/about/oscp.png"
 
 - type: certification
   name: AWS Certified Cloud Practitioner
   url: "https://www.credly.com/badges/fc4ab3d0-1183-476a-9a6f-b8ccd2f0fef1"
-  badge: "/images/sections/about/aws_cloud_practitioner.png"
+  badge: "/sections/about/aws_cloud_practitioner.png"
 
 - type: certification
   name: CompTIA CySA+ ce Certification
   url: "https://www.credly.com/badges/5c01a95a-1291-46b9-9eb3-f745becbf365"
-  badge: "/images/sections/about/cysa.png"
+  badge: "/sections/about/cysa.png"
 
 - type: certification
   name: Virtual Hacking Labs Advanced 
   url: "https://www.virtualhackinglabs.com/labs/penetration-testing-lab/"
-  badge: "/images/sections/about/vhl.png"
+  badge: "/sections/about/vhl.png"
 
 - type: certification
   name: Amateur Ham Radio Extra
   url: "http://www.arrl.org/upgrading-to-an-extra-license"
-  badge: "/images/sections/about/ham.png"
+  badge: "/sections/about/ham.png"
 
 # - type: soft-skill-indicator
 #   name: Leadership
