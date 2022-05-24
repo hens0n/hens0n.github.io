@@ -1,7 +1,7 @@
 ---
 title: "1970 Trans Am"
 date: 2022-05-23T10:13:49-05:00
-draft: true
+draft: false
 menu:
   sidebar:
     name: 1970 Trans Am
