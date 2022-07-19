@@ -96,9 +96,14 @@ badges:
   badge: "sections/about/vhl.png"
 
 - type: certification
-  name: Amateur Ham Radio Extra
-  url: "http://www.arrl.org/upgrading-to-an-extra-license"
-  badge: "sections/about/ham.png"
+  name: Elastic Certified Engineer
+  url: "https://badge.trueability.com/"
+  badge: "sections/about/elastic_certified_engineer.png"
+
+# - type: certification
+#   name: Amateur Ham Radio Extra
+#   url: "http://www.arrl.org/upgrading-to-an-extra-license"
+#   badge: "sections/about/ham.png"
 
 # - type: soft-skill-indicator
 #   name: Leadership
