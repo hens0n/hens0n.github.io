@@ -11,6 +11,28 @@ section:
 # Your experiences
 experiences:
 - company:
+    name: ECS 
+    url: "https://ecstech.com/"
+    location: Huntsville Alabama
+    # company overview
+    overview: Headquartered in Fairfax, Virginia, ECS has more than 3,500 employees throughout the U.S.
+  positions:
+  - designation: Cybersecurity Engineer
+    start: Jul 2022
+    # don't provide end date if you are currently working there. It will be replaced by "Present"
+    # end: Dec 2020
+    # give some points about what was your responsibilities at the company.
+    # responsibilities:
+    # - Serve as Computer Network Defense(CND) Contractor Lead for a MDA Directorate.
+    # - Work with multiple teams to report and address compliance and information assurance vulnerability management (IAVM) findings.
+    # - Validate vulnerability assessments, artifacts in eMASS, ePO and ACAS and make a recommendation to address findings.
+    # - Coordinate with multiple teams to track, document, and respond to incidents.
+    # - Support Risk Management Framework (RMF) Assessment and Authorization (A&A) processes in our team.
+    # - Maintain CND Strategic Plans, Policies, Procedures.
+
+
+
+- company:
     name: VikTech
     url: "http://www.viktech.net"
     location: Redstone Arsenal
@@ -19,6 +41,7 @@ experiences:
   positions:
   - designation: Senior Cybersecurity Consultant
     start: Apr 2019
+    end: Jul 2022
     # don't provide end date if you are currently working there. It will be replaced by "Present"
     # end: Dec 2020
     # give some points about what was your responsibilities at the company.
