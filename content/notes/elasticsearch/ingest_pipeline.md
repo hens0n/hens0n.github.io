@@ -14,7 +14,9 @@ menu:
 
 
 
-{{< note title="Script Processor: Lowercase ArrayList of Maphashes" >}}
+{{< note title="Script Processor: Lowercase ArrayList of MapHashes" >}}
+
+Lowercase keys of MapHash in a ArrayList
 
 ```java
 if(ctx.field_name !=l null){
