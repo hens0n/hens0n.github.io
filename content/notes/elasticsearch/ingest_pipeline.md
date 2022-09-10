@@ -19,7 +19,7 @@ menu:
 Lowercase keys of MapHash in a ArrayList
 
 ```java
-if(ctx.field_name !=l null){
+if(ctx.field_name != null){
   ArrayList lower_array = new ArrayList();
   for (item in ctx.field_name){
     ArrayList temp = new ArrayList();
