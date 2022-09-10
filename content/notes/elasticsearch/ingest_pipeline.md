@@ -14,7 +14,7 @@ menu:
 
 
 
-{{< note title="Script Processor: Painless Lowercase ArrayList of Maphashes" >}}
+{{< note title="Script Processor: Lowercase ArrayList of Maphashes" >}}
 
 ```java
 if(ctx.field_name !=l null){
