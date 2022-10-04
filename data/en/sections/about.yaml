@@ -15,7 +15,7 @@ company:
   url: "https://www.viktech.net"
 
 # your resume. this file path should be relative to you "static" directory
-resume: "files/Jacob_Henson_Resume_202202.pdf"
+resume: "sections/about/Jacob_Henson_Resume_202202.pdf"
 
 # a summary about you
 summary: 'IT leader with more than 16 years of Cybersecurity and IT experience leading teams and managing projects.  I am known for being focused, calm, and level-headed.  A proven history of project-oriented development, governance, risk management, and strategies developed to meet the needs of a growing business.  I have years of experience working with multiple compliance standards like NIST SP 800-53, NIST SP 800-171, ISO 20,000, CSC Top 20, and NIST Cybersecurity Framework.   I have experience with IT due diligence and integration of mergers and acquisitions.  I am most passionate about solving problems and improving processes.'
