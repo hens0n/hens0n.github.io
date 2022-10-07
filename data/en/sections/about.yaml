@@ -105,6 +105,11 @@ badges:
   url: "http://www.arrl.org/upgrading-to-an-extra-license"
   badge: "sections/about/ham.png"
 
+- type: certification
+  name: Swimlane Certified SOAR User
+  url: "https://swimlane.com/services/certification-program"
+  badge: "sections/about/scsu.png"
+
 # - type: soft-skill-indicator
 #   name: Leadership
 #   percentage: 85
