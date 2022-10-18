@@ -110,6 +110,11 @@ badges:
   url: "https://swimlane.com/services/certification-program"
   badge: "sections/about/scsu.png"
 
+- type: certification
+  name: Swimlane Certified SOAR Developer
+  url: "https://swimlane.com/services/certification-program"
+  badge: "sections/about/scsd.png"
+
 # - type: soft-skill-indicator
 #   name: Leadership
 #   percentage: 85
