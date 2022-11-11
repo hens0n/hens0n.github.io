@@ -91,19 +91,19 @@ badges:
   badge: "sections/about/cysa.png"
 
 - type: certification
-  name: Virtual Hacking Labs Advanced 
-  url: "https://www.virtualhackinglabs.com/labs/penetration-testing-lab/"
-  badge: "sections/about/vhl.png"
-
-- type: certification
   name: Elastic Certified Engineer
-  url: "https://www.credential.net/0fd17b12-dbba-45e4-a390-7563a139273d"
+  url: "https://certified.elastic.co/0fd17b12-dbba-45e4-a390-7563a139273d#gs.hughbu"
   badge: "sections/about/elastic_certified_engineer.png"
 
 - type: certification
-  name: Amateur Ham Radio Extra
-  url: "http://www.arrl.org/upgrading-to-an-extra-license"
-  badge: "sections/about/ham.png"
+  name: Elastic Certified Analyst
+  url: "https://certified.elastic.co/57a4f17f-6e80-4dc0-9bd3-ebfd3716bc73#gs.hughpd"
+  badge: "sections/about/elastic_certified_analyst.png"
+
+- type: certification
+  name: Virtual Hacking Labs Advanced 
+  url: "https://www.virtualhackinglabs.com/labs/penetration-testing-lab/"
+  badge: "sections/about/vhl.png"
 
 - type: certification
   name: Swimlane Certified SOAR User
@@ -119,6 +119,11 @@ badges:
   name: Swimlane Certified SOAR Administrator
   url: "https://swimlane.com/services/certification-program"
   badge: "sections/about/scsa.png"
+
+- type: certification
+  name: Amateur Ham Radio Extra
+  url: "http://www.arrl.org/upgrading-to-an-extra-license"
+  badge: "sections/about/ham.png"
 
 # - type: soft-skill-indicator
 #   name: Leadership
