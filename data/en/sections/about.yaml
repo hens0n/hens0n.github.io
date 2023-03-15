@@ -8,11 +8,11 @@ section:
   template: sections/about.html
 
 # your designation
-designation: Senior Cybersecurity Consultant
+designation: Cybersecurity Engineer
 # your company information
 company:
-  name: Viktech
-  url: "https://www.viktech.net"
+  name: ECS
+  url: "https://ecstech.com"
 
 # your resume. this file path should be relative to you "static" directory
 resume: "sections/about/Jacob_Henson_Resume_202202.pdf"
