@@ -80,10 +80,7 @@ badges:
   url: "https://www.credly.com/badges/fc4ab3d0-1183-476a-9a6f-b8ccd2f0fef1"
   badge: "sections/about/oscp.png"
 
-- type: certification
-  name: AWS Certified Cloud Practitioner
-  url: "https://www.credly.com/badges/d1b7daf3-1c2c-4bdb-afe0-3d7a5b8d7f70"
-  badge: "sections/about/aws_cloud_practitioner.png"
+
 
 - type: certification
   name: CompTIA CySA+ ce Certification
@@ -96,34 +93,44 @@ badges:
   badge: "sections/about/elastic_certified_engineer.png"
 
 - type: certification
+  name: Elastic Certified Observability Engineer
+  url: "https://certified.elastic.co/1b0d6af5-7ea5-40fa-8684-acdb8144b430#gs.sn5w89"
+  badge: "sections/about/elatic_certified_observability.png"
+
+- type: certification
   name: Elastic Certified Analyst
   url: "https://certified.elastic.co/57a4f17f-6e80-4dc0-9bd3-ebfd3716bc73#gs.hughpd"
   badge: "sections/about/elastic_certified_analyst.png"
+
+- type: certification
+  name: AWS Certified Cloud Practitioner
+  url: "https://www.credly.com/badges/d1b7daf3-1c2c-4bdb-afe0-3d7a5b8d7f70"
+  badge: "sections/about/aws_cloud_practitioner.png"
 
 - type: certification
   name: Virtual Hacking Labs Advanced 
   url: "https://www.virtualhackinglabs.com/labs/penetration-testing-lab/"
   badge: "sections/about/vhl.png"
 
-- type: certification
-  name: Swimlane Certified SOAR User
-  url: "https://swimlane.com/services/certification-program"
-  badge: "sections/about/scsu.png"
+# - type: certification
+#   name: Swimlane Certified SOAR User
+#   url: "https://swimlane.com/services/certification-program"
+#   badge: "sections/about/scsu.png"
 
-- type: certification
-  name: Swimlane Certified SOAR Developer
-  url: "https://swimlane.com/services/certification-program"
-  badge: "sections/about/scsd.png"
+# - type: certification
+#   name: Swimlane Certified SOAR Developer
+#   url: "https://swimlane.com/services/certification-program"
+#   badge: "sections/about/scsd.png"
 
 - type: certification
   name: Swimlane Certified SOAR Administrator
   url: "https://swimlane.com/services/certification-program"
   badge: "sections/about/scsa.png"
 
-- type: certification
-  name: Amateur Ham Radio Extra
-  url: "http://www.arrl.org/upgrading-to-an-extra-license"
-  badge: "sections/about/ham.png"
+# - type: certification
+#   name: Amateur Ham Radio Extra
+#   url: "http://www.arrl.org/upgrading-to-an-extra-license"
+#   badge: "sections/about/ham.png"
 
 # - type: soft-skill-indicator
 #   name: Leadership
