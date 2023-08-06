@@ -22,13 +22,20 @@ experiences:
     # don't provide end date if you are currently working there. It will be replaced by "Present"
     # end: Dec 2020
     # give some points about what was your responsibilities at the company.
-    # responsibilities:
-    # - Serve as Computer Network Defense(CND) Contractor Lead for a MDA Directorate.
-    # - Work with multiple teams to report and address compliance and information assurance vulnerability management (IAVM) findings.
-    # - Validate vulnerability assessments, artifacts in eMASS, ePO and ACAS and make a recommendation to address findings.
-    # - Coordinate with multiple teams to track, document, and respond to incidents.
-    # - Support Risk Management Framework (RMF) Assessment and Authorization (A&A) processes in our team.
-    # - Maintain CND Strategic Plans, Policies, Procedures.
+    responsibilities:
+    - As a lead SIEM engineer, I take charge of overseeing professional service engagements and managing service provider (MSP) customers, working collaboratively with a team of engineers.
+    - Implementing configuration management using Ansible to streamline and automate processes.
+    - Set up and maintain Elasticsearch clusters as well as Swimlane clusters for seamless operations.
+    - Configuring Fleet and Elastic agent policies with both standard and custom integrations to optimize operations.
+    - Deploy machine learning jobs with the objective of detecting anomalies.
+    - Ensuring compliance and security standards by applying STIGS to Swimlane and Elasticsearch platforms.
+    - Evaluating and enhancing the performance and security of customers' Elasticsearch environments by providing expert guidance.
+    - Employing Docker for containerization and establishing immutable pipelines for enhanced efficiency.
+    - Configure PagerDuty for multiple teams and workflows to ensure smooth incident management.
+    - Develop custom solutions using AWS SNS, SQS, and Lambda functions to address specific requirements.
+    - Create and maintain comprehensive documentation of security configurations, procedures, and incidents.
+    - Facilitate and lead Scrum meetings for the SIEM team while collaborating closely with project managers to prioritize and incorporate tasks into the backlog.
+
 
 
 
