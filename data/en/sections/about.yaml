@@ -29,7 +29,7 @@ socialLinks:
 
 - name: Github
   icon: "fab fa-github"
-  url: "https://www.github.com/cyberphilia"
+  url: "https://www.github.com/hens0n"
 
 
 - name: LinkedIn
@@ -103,11 +103,6 @@ badges:
   badge: "sections/about/elastic_certified_analyst.png"
 
 - type: certification
-  name: AWS Certified Cloud Practitioner
-  url: "https://www.credly.com/badges/d1b7daf3-1c2c-4bdb-afe0-3d7a5b8d7f70"
-  badge: "sections/about/aws_cloud_practitioner.png"
-
-- type: certification
   name: Virtual Hacking Labs Advanced 
   url: "https://www.virtualhackinglabs.com/labs/penetration-testing-lab/"
   badge: "sections/about/vhl.png"
@@ -122,15 +117,11 @@ badges:
 #   url: "https://swimlane.com/services/certification-program"
 #   badge: "sections/about/scsd.png"
 
-- type: certification
-  name: Swimlane Certified SOAR Administrator
-  url: "https://swimlane.com/services/certification-program"
-  badge: "sections/about/scsa.png"
 
-# - type: certification
-#   name: Amateur Ham Radio Extra
-#   url: "http://www.arrl.org/upgrading-to-an-extra-license"
-#   badge: "sections/about/ham.png"
+- type: certification
+  name: Amateur Ham Radio Extra
+  url: "http://www.arrl.org/upgrading-to-an-extra-license"
+  badge: "sections/about/ham.png"
 
 # - type: soft-skill-indicator
 #   name: Leadership
