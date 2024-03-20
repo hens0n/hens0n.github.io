@@ -15,7 +15,7 @@ degrees:
   timeframe: "December 2020"
   institution:
     name: CMMC Accreditation Body
-    url: "https://portal.cmmcab.org/marketplace/jacob-henson//"
+    url: "https://portal.cmmcab.org/marketplace/jacob-henson/"
   takenCourses: #(optional)
     # if true, the courses will be rendered as a table otherwise it will render as a list and the grades will be hidden.
     showGrades: false

@@ -11,6 +11,27 @@ section:
 # Your experiences
 experiences:
 - company:
+    name: FTI 
+    url: "https://www.ftidefense.com/"
+    location: Huntsville Alabama
+    # company overview
+    overview: Headquartered in Dayton, Ohio, FTI has seven additional facilities with varying levels of clearance, along with a presence in 39 states and Puerto Rico.
+  positions:
+  - designation: Senior Software Developer
+    start: Sep 2023
+    # don't provide end date if you are currently working there. It will be replaced by "Present"
+    # end: Dec 2020
+    # give some points about what was your responsibilities at the company.
+    responsibilities:
+    - Design, develop, document, test, and debug new and existing software systems, applications, and microservices both cloud-based and on-premise.
+    - Utilize Docker for creating, managing, and distributing containers, significantly enhancing development pipelines and fostering a consistent, isolated environment across all stages of the application lifecycle.
+    - Collaborate with end users to prototype, refine, test, and debug programs to fulfill user needs.
+    - Utilize Jupyter Notebooks for various development and data analysis tasks.
+    - Manage software development projects using Azure DevOps Server for source control, backlog management, and sprint planning.
+
+
+
+- company:
     name: ECS 
     url: "https://ecstech.com/"
     location: Huntsville Alabama
@@ -19,9 +40,7 @@ experiences:
   positions:
   - designation: Cybersecurity Engineer
     start: Jul 2022
-    # don't provide end date if you are currently working there. It will be replaced by "Present"
-    # end: Dec 2020
-    # give some points about what was your responsibilities at the company.
+    end: Sep 2023
     responsibilities:
     - As a lead SIEM engineer, I take charge of overseeing professional service engagements and managing service provider (MSP) customers, working collaboratively with a team of engineers.
     - Implementing configuration management using Ansible to streamline and automate processes.
