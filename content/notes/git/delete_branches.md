@@ -16,7 +16,7 @@ menu:
 
 {{< note title="Git: Delete local branches that no longer exist on origin" >}}
 
-Fetch the latest updates from the remoten
+Fetch the latest updates from the remote
 
 ```shell
 git fetch --prune
