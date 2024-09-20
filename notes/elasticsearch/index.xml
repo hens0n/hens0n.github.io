@@ -2,4 +2,19 @@
 &lt;div class="item">
 &lt;h5 class="note-title">&lt;span>Script Processor: Lowercase ArrayList of MapHashes&lt;/span>&lt;/h5>
 &lt;div class="card">
-&lt;div class="card-body">&lt;p>Lowercase keys of MapHash in a ArrayList&lt;/p></description></item></channel></rss>
+&lt;div class="card-body">&lt;p>Lowercase keys of MapHash in a ArrayList&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">if&lt;/span>(ctx.&lt;span style="color:#a6e22e">field_name&lt;/span> &lt;span style="color:#f92672">!=&lt;/span> &lt;span style="color:#66d9ef">null&lt;/span>){
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ArrayList lower_array &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> ArrayList();
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">for&lt;/span> (item in ctx.&lt;span style="color:#a6e22e">field_name&lt;/span>){
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ArrayList temp &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> ArrayList();
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">for&lt;/span>(map_entry in item.&lt;span style="color:#a6e22e">entrySet&lt;/span>()){
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> temp.&lt;span style="color:#a6e22e">add&lt;/span>(&lt;span style="color:#f92672">[&lt;/span>map_entry.&lt;span style="color:#a6e22e">getKey&lt;/span>().&lt;span style="color:#a6e22e">toLowerCase&lt;/span>():map_entry.&lt;span style="color:#a6e22e">getValue&lt;/span>()&lt;span style="color:#f92672">]&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> lower_array.&lt;span style="color:#a6e22e">add&lt;/span>(temp);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ctx.&lt;span style="color:#a6e22e">field_name&lt;/span> &lt;span style="color:#f92672">=&lt;/span> lower_array;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div></description></item></channel></rss>

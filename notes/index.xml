@@ -2,7 +2,16 @@
 &lt;div class="item">
 &lt;h5 class="note-title">&lt;span>Git: Delete local branches that no longer exist on origin&lt;/span>&lt;/h5>
 &lt;div class="card">
-&lt;div class="card-body">&lt;p>Fetch the latest updates from the remote&lt;/p></description></item><item><title>httpjson</title><link>https://hens0n.github.io/notes/logstash/httpjson/</link><pubDate>Sat, 20 May 2023 15:00:00 +0000</pubDate><guid>https://hens0n.github.io/notes/logstash/httpjson/</guid><description>&lt;div class="note-card ">
+&lt;div class="card-body">&lt;p>Fetch the latest updates from the remote&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>git fetch --prune
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>List branches that have been deleted on the remote but still exist locally&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>git branch -vv | grep &lt;span style="color:#e6db74">&amp;#39;: gone&amp;#39;&lt;/span> | awk &lt;span style="color:#e6db74">&amp;#39;{print $1}&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Delete the local branches that no longer exist on the remote&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>git branch -vv | grep &lt;span style="color:#e6db74">&amp;#39;: gone&amp;#39;&lt;/span> | awk &lt;span style="color:#e6db74">&amp;#39;{print $1}&amp;#39;&lt;/span> | xargs git branch -d
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div></description></item><item><title>httpjson</title><link>https://hens0n.github.io/notes/logstash/httpjson/</link><pubDate>Sat, 20 May 2023 15:00:00 +0000</pubDate><guid>https://hens0n.github.io/notes/logstash/httpjson/</guid><description>&lt;div class="note-card ">
 &lt;div class="item">
 &lt;h5 class="note-title">&lt;span>Filebeat httpjson&lt;/span>&lt;/h5>
 &lt;div class="card">
@@ -48,11 +57,29 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">output.console&lt;/span>:
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">pretty&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>Ingest Pipeline</title><link>https://hens0n.github.io/notes/elasticsearch/ingest_pipeline/</link><pubDate>Fri, 09 Sep 2022 15:02:44 -0500</pubDate><guid>https://hens0n.github.io/notes/elasticsearch/ingest_pipeline/</guid><description>&lt;div class="note-card ">
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div></description></item><item><title>Ingest Pipeline</title><link>https://hens0n.github.io/notes/elasticsearch/ingest_pipeline/</link><pubDate>Fri, 09 Sep 2022 15:02:44 -0500</pubDate><guid>https://hens0n.github.io/notes/elasticsearch/ingest_pipeline/</guid><description>&lt;div class="note-card ">
 &lt;div class="item">
 &lt;h5 class="note-title">&lt;span>Script Processor: Lowercase ArrayList of MapHashes&lt;/span>&lt;/h5>
 &lt;div class="card">
-&lt;div class="card-body">&lt;p>Lowercase keys of MapHash in a ArrayList&lt;/p></description></item><item><title>Sharepoint</title><link>https://hens0n.github.io/notes/powershell/sharepoint/</link><pubDate>Tue, 17 May 2022 15:03:53 -0500</pubDate><guid>https://hens0n.github.io/notes/powershell/sharepoint/</guid><description>&lt;!-- Variable -->
+&lt;div class="card-body">&lt;p>Lowercase keys of MapHash in a ArrayList&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">if&lt;/span>(ctx.&lt;span style="color:#a6e22e">field_name&lt;/span> &lt;span style="color:#f92672">!=&lt;/span> &lt;span style="color:#66d9ef">null&lt;/span>){
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ArrayList lower_array &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> ArrayList();
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">for&lt;/span> (item in ctx.&lt;span style="color:#a6e22e">field_name&lt;/span>){
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ArrayList temp &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> ArrayList();
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">for&lt;/span>(map_entry in item.&lt;span style="color:#a6e22e">entrySet&lt;/span>()){
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> temp.&lt;span style="color:#a6e22e">add&lt;/span>(&lt;span style="color:#f92672">[&lt;/span>map_entry.&lt;span style="color:#a6e22e">getKey&lt;/span>().&lt;span style="color:#a6e22e">toLowerCase&lt;/span>():map_entry.&lt;span style="color:#a6e22e">getValue&lt;/span>()&lt;span style="color:#f92672">]&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> lower_array.&lt;span style="color:#a6e22e">add&lt;/span>(temp);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ctx.&lt;span style="color:#a6e22e">field_name&lt;/span> &lt;span style="color:#f92672">=&lt;/span> lower_array;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div></description></item><item><title>Sharepoint</title><link>https://hens0n.github.io/notes/powershell/sharepoint/</link><pubDate>Tue, 17 May 2022 15:03:53 -0500</pubDate><guid>https://hens0n.github.io/notes/powershell/sharepoint/</guid><description>&lt;!-- Variable -->
 &lt;div class="note-card ">
 &lt;div class="item">
 &lt;h5 class="note-title">&lt;span>Get List Items&lt;/span>&lt;/h5>
@@ -92,10 +119,16 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> $itemArry
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>Powershell</title><link>https://hens0n.github.io/notes/powershell/general/</link><pubDate>Tue, 17 May 2022 15:02:44 -0500</pubDate><guid>https://hens0n.github.io/notes/powershell/general/</guid><description>&lt;!-- Start Powershell -->
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div></description></item><item><title>Powershell</title><link>https://hens0n.github.io/notes/powershell/general/</link><pubDate>Tue, 17 May 2022 15:02:44 -0500</pubDate><guid>https://hens0n.github.io/notes/powershell/general/</guid><description>&lt;!-- Start Powershell -->
 &lt;div class="note-card ">
 &lt;div class="item">
 &lt;h5 class="note-title">&lt;span>Start Powershell&lt;/span>&lt;/h5>
 &lt;div class="card">
 &lt;div class="card-body">&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>powershell.exe -nop -exec bypass
-&lt;/span>&lt;/span>&lt;/code>&lt;/pr</description></item></channel></rss>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
+&lt;/div>
+&lt;/div>
+&lt;/div></description></item></channel></rss>
