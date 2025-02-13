@@ -31,7 +31,7 @@ git branch -vv | grep ': gone' | awk '{print $1}'
 Delete the local branches that no longer exist on the remote
 
 ```shell
-git branch -vv | grep ': gone' | awk '{print $1}' | xargs git branch -d
+git branch -vv | grep ': gone' | awk '{print $1}' | xargs git branch -D
 ```
 
 
