@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ElasticSearch Notes on Jacob Henson</title><link>https://hens0n.github.io/notes/elasticsearch/</link><description>Recent content in ElasticSearch Notes on Jacob Henson</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 09 Sep 2022 15:02:44 -0500</lastBuildDate><atom:link href="https://hens0n.github.io/notes/elasticsearch/index.xml" rel="self" type="application/rss+xml"/><item><title>Ingest Pipeline</title><link>https://hens0n.github.io/notes/elasticsearch/ingest_pipeline/</link><pubDate>Fri, 09 Sep 2022 15:02:44 -0500</pubDate><guid>https://hens0n.github.io/notes/elasticsearch/ingest_pipeline/</guid><description>&lt;div class="note-card ">
-&lt;div class="item">
-&lt;h5 class="note-title">&lt;span>Script Processor: Lowercase ArrayList of MapHashes&lt;/span>&lt;/h5>
-&lt;div class="card">
-&lt;div class="card-body">&lt;p>Lowercase keys of MapHash in a ArrayList&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">if&lt;/span>(ctx.&lt;span style="color:#a6e22e">field_name&lt;/span> &lt;span style="color:#f92672">!=&lt;/span> &lt;span style="color:#66d9ef">null&lt;/span>){
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ArrayList lower_array &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> ArrayList();
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">for&lt;/span> (item in ctx.&lt;span style="color:#a6e22e">field_name&lt;/span>){
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ArrayList temp &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#66d9ef">new&lt;/span> ArrayList();
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">for&lt;/span>(map_entry in item.&lt;span style="color:#a6e22e">entrySet&lt;/span>()){
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> temp.&lt;span style="color:#a6e22e">add&lt;/span>(&lt;span style="color:#f92672">[&lt;/span>map_entry.&lt;span style="color:#a6e22e">getKey&lt;/span>().&lt;span style="color:#a6e22e">toLowerCase&lt;/span>():map_entry.&lt;span style="color:#a6e22e">getValue&lt;/span>()&lt;span style="color:#f92672">]&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> lower_array.&lt;span style="color:#a6e22e">add&lt;/span>(temp);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ctx.&lt;span style="color:#a6e22e">field_name&lt;/span> &lt;span style="color:#f92672">=&lt;/span> lower_array;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;/div></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ElasticSearch Notes on Jacob Henson</title><link>https://hens0n.github.io/notes/elasticsearch/</link><description>Recent content in ElasticSearch Notes on Jacob Henson</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 09 Sep 2022 15:02:44 -0500</lastBuildDate><atom:link href="https://hens0n.github.io/notes/elasticsearch/index.xml" rel="self" type="application/rss+xml"/><item><title>Ingest Pipeline</title><link>https://hens0n.github.io/notes/elasticsearch/ingest_pipeline/</link><pubDate>Fri, 09 Sep 2022 15:02:44 -0500</pubDate><guid>https://hens0n.github.io/notes/elasticsearch/ingest_pipeline/</guid><description>&lt;div class="note-card "&gt;
+&lt;div class="item"&gt;
+&lt;h5 class="note-title"&gt;&lt;span&gt;Script Processor: Lowercase ArrayList of MapHashes&lt;/span&gt;&lt;/h5&gt;
+&lt;div class="card"&gt;
+&lt;div class="card-body"&gt;&lt;p&gt;Lowercase keys of MapHash in a ArrayList&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-java" data-lang="java"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;if&lt;/span&gt;(ctx.&lt;span style="color:#a6e22e"&gt;field_name&lt;/span&gt; &lt;span style="color:#f92672"&gt;!=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;null&lt;/span&gt;){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ArrayList lower_array &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; ArrayList();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; (item in ctx.&lt;span style="color:#a6e22e"&gt;field_name&lt;/span&gt;){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ArrayList temp &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;new&lt;/span&gt; ArrayList();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt;(map_entry in item.&lt;span style="color:#a6e22e"&gt;entrySet&lt;/span&gt;()){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; temp.&lt;span style="color:#a6e22e"&gt;add&lt;/span&gt;(&lt;span style="color:#f92672"&gt;[&lt;/span&gt;map_entry.&lt;span style="color:#a6e22e"&gt;getKey&lt;/span&gt;().&lt;span style="color:#a6e22e"&gt;toLowerCase&lt;/span&gt;():map_entry.&lt;span style="color:#a6e22e"&gt;getValue&lt;/span&gt;()&lt;span style="color:#f92672"&gt;]&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; lower_array.&lt;span style="color:#a6e22e"&gt;add&lt;/span&gt;(temp);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ctx.&lt;span style="color:#a6e22e"&gt;field_name&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; lower_array;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description></item></channel></rss>

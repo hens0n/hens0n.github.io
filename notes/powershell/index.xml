@@ -1,53 +1,53 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Powershell Notes on Jacob Henson</title><link>https://hens0n.github.io/notes/powershell/</link><description>Recent content in Powershell Notes on Jacob Henson</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 17 May 2022 15:03:53 -0500</lastBuildDate><atom:link href="https://hens0n.github.io/notes/powershell/index.xml" rel="self" type="application/rss+xml"/><item><title>Sharepoint</title><link>https://hens0n.github.io/notes/powershell/sharepoint/</link><pubDate>Tue, 17 May 2022 15:03:53 -0500</pubDate><guid>https://hens0n.github.io/notes/powershell/sharepoint/</guid><description>&lt;!-- Variable -->
-&lt;div class="note-card ">
-&lt;div class="item">
-&lt;h5 class="note-title">&lt;span>Get List Items&lt;/span>&lt;/h5>
-&lt;div class="card">
-&lt;div class="card-body">&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">function&lt;/span> Get-ListItems&lt;span style="color:#f92672">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> param&lt;span style="color:#f92672">(&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">[&lt;/span>srtring&lt;span style="color:#f92672">]&lt;/span>$sharepointSite,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">[&lt;/span>srtring&lt;span style="color:#f92672">]&lt;/span>$listTitle,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">[&lt;/span>srtring&lt;span style="color:#f92672">]&lt;/span>$selectedFields
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">)&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $itemArry &lt;span style="color:#f92672">=&lt;/span>@&lt;span style="color:#f92672">()&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $pageSize &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">5000&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $pageId &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $header &lt;span style="color:#f92672">=&lt;/span> @&lt;span style="color:#f92672">{&lt;/span>&lt;span style="color:#e6db74">&amp;#39;Accept&amp;#39;&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#39;application/json; odata=verbose&amp;#39;&lt;/span>&lt;span style="color:#f92672">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span> &lt;span style="color:#f92672">(&lt;/span>$selectedFields.Length -gt 0&lt;span style="color:#f92672">){&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $selectStatement &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;&amp;amp;`&lt;/span>$SELECT&lt;span style="color:#e6db74">=&lt;/span>&lt;span style="color:#66d9ef">$(&lt;/span>$selectedFields&lt;span style="color:#66d9ef">)&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">while&lt;/span> &lt;span style="color:#f92672">(&lt;/span>$pageId&lt;span style="color:#f92672">){&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $uri &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;&lt;/span>&lt;span style="color:#66d9ef">$(&lt;/span>$sharepointSite&lt;span style="color:#66d9ef">)&lt;/span>&lt;span style="color:#e6db74">/_api/Web/Lists/GetByTitle(&amp;#39;&lt;/span>&lt;span style="color:#66d9ef">$(&lt;/span>$listTitle&lt;span style="color:#66d9ef">)&lt;/span>&lt;span style="color:#e6db74">&amp;#39;)/Items?`&lt;/span>$skiptoken&lt;span style="color:#e6db74">=Paged=True%26p_ID=&lt;/span>&lt;span style="color:#66d9ef">$(&lt;/span>$pageId&lt;span style="color:#66d9ef">)&lt;/span>&lt;span style="color:#e6db74">&amp;amp;`&lt;/span>$top&lt;span style="color:#e6db74">=&lt;/span>&lt;span style="color:#66d9ef">$(&lt;/span>$pageSize&lt;span style="color:#66d9ef">)$(&lt;/span>$selectStatement&lt;span style="color:#66d9ef">)&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">#Get list Get-ListItems&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $response &lt;span style="color:#f92672">=&lt;/span> Invoke-RestMethod -Method Get -Uri $uri -Headers $header -UseDefaultCredentials:$true
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $data &lt;span style="color:#f92672">=&lt;/span> $response.ToString&lt;span style="color:#f92672">()&lt;/span>.Replace&lt;span style="color:#f92672">(&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&amp;#34;&amp;#34;ID&amp;#34;&amp;#34;&amp;#34;&lt;/span>,&lt;span style="color:#e6db74">&amp;#34;_ID&amp;#34;&lt;/span>&lt;span style="color:#f92672">)&lt;/span> | ConvertFrom-Json
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span>&lt;span style="color:#f92672">(&lt;/span>$data.d.results.Count -gt 0&lt;span style="color:#f92672">){&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">#Add to the Array&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $itemsArray +&lt;span style="color:#f92672">=&lt;/span> $data.d.results
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">#Get last id in the results set for next starting sharepointSite&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $pageId &lt;span style="color:#f92672">=&lt;/span> $data.d.results&lt;span style="color:#f92672">[&lt;/span>-1&lt;span style="color:#f92672">]&lt;/span>.id
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">else&lt;/span>&lt;span style="color:#f92672">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> $pageId &lt;span style="color:#f92672">=&lt;/span>-1
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> $itemArry
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;/div></description></item><item><title>Powershell</title><link>https://hens0n.github.io/notes/powershell/general/</link><pubDate>Tue, 17 May 2022 15:02:44 -0500</pubDate><guid>https://hens0n.github.io/notes/powershell/general/</guid><description>&lt;!-- Start Powershell -->
-&lt;div class="note-card ">
-&lt;div class="item">
-&lt;h5 class="note-title">&lt;span>Start Powershell&lt;/span>&lt;/h5>
-&lt;div class="card">
-&lt;div class="card-body">&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>powershell.exe -nop -exec bypass
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;/div></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Powershell Notes on Jacob Henson</title><link>https://hens0n.github.io/notes/powershell/</link><description>Recent content in Powershell Notes on Jacob Henson</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 17 May 2022 15:03:53 -0500</lastBuildDate><atom:link href="https://hens0n.github.io/notes/powershell/index.xml" rel="self" type="application/rss+xml"/><item><title>Sharepoint</title><link>https://hens0n.github.io/notes/powershell/sharepoint/</link><pubDate>Tue, 17 May 2022 15:03:53 -0500</pubDate><guid>https://hens0n.github.io/notes/powershell/sharepoint/</guid><description>&lt;!-- Variable --&gt;
+&lt;div class="note-card "&gt;
+&lt;div class="item"&gt;
+&lt;h5 class="note-title"&gt;&lt;span&gt;Get List Items&lt;/span&gt;&lt;/h5&gt;
+&lt;div class="card"&gt;
+&lt;div class="card-body"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;function&lt;/span&gt; Get-ListItems&lt;span style="color:#f92672"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; param&lt;span style="color:#f92672"&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;[&lt;/span&gt;srtring&lt;span style="color:#f92672"&gt;]&lt;/span&gt;$sharepointSite,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;[&lt;/span&gt;srtring&lt;span style="color:#f92672"&gt;]&lt;/span&gt;$listTitle,
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;[&lt;/span&gt;srtring&lt;span style="color:#f92672"&gt;]&lt;/span&gt;$selectedFields
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $itemArry &lt;span style="color:#f92672"&gt;=&lt;/span&gt;@&lt;span style="color:#f92672"&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $pageSize &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;5000&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $pageId &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $header &lt;span style="color:#f92672"&gt;=&lt;/span&gt; @&lt;span style="color:#f92672"&gt;{&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#39;Accept&amp;#39;&lt;/span&gt; &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#39;application/json; odata=verbose&amp;#39;&lt;/span&gt;&lt;span style="color:#f92672"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; &lt;span style="color:#f92672"&gt;(&lt;/span&gt;$selectedFields.Length -gt 0&lt;span style="color:#f92672"&gt;){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $selectStatement &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;&amp;amp;`&lt;/span&gt;$SELECT&lt;span style="color:#e6db74"&gt;=&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;$(&lt;/span&gt;$selectedFields&lt;span style="color:#66d9ef"&gt;)&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;while&lt;/span&gt; &lt;span style="color:#f92672"&gt;(&lt;/span&gt;$pageId&lt;span style="color:#f92672"&gt;){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $uri &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;$(&lt;/span&gt;$sharepointSite&lt;span style="color:#66d9ef"&gt;)&lt;/span&gt;&lt;span style="color:#e6db74"&gt;/_api/Web/Lists/GetByTitle(&amp;#39;&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;$(&lt;/span&gt;$listTitle&lt;span style="color:#66d9ef"&gt;)&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#39;)/Items?`&lt;/span&gt;$skiptoken&lt;span style="color:#e6db74"&gt;=Paged=True%26p_ID=&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;$(&lt;/span&gt;$pageId&lt;span style="color:#66d9ef"&gt;)&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;amp;`&lt;/span&gt;$top&lt;span style="color:#e6db74"&gt;=&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;$(&lt;/span&gt;$pageSize&lt;span style="color:#66d9ef"&gt;)$(&lt;/span&gt;$selectStatement&lt;span style="color:#66d9ef"&gt;)&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;#Get list Get-ListItems&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $response &lt;span style="color:#f92672"&gt;=&lt;/span&gt; Invoke-RestMethod -Method Get -Uri $uri -Headers $header -UseDefaultCredentials:$true
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $data &lt;span style="color:#f92672"&gt;=&lt;/span&gt; $response.ToString&lt;span style="color:#f92672"&gt;()&lt;/span&gt;.Replace&lt;span style="color:#f92672"&gt;(&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;&amp;#34;&amp;#34;ID&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;,&lt;span style="color:#e6db74"&gt;&amp;#34;_ID&amp;#34;&lt;/span&gt;&lt;span style="color:#f92672"&gt;)&lt;/span&gt; | ConvertFrom-Json
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt;&lt;span style="color:#f92672"&gt;(&lt;/span&gt;$data.d.results.Count -gt 0&lt;span style="color:#f92672"&gt;){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;#Add to the Array&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $itemsArray +&lt;span style="color:#f92672"&gt;=&lt;/span&gt; $data.d.results
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;#Get last id in the results set for next starting sharepointSite&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $pageId &lt;span style="color:#f92672"&gt;=&lt;/span&gt; $data.d.results&lt;span style="color:#f92672"&gt;[&lt;/span&gt;-1&lt;span style="color:#f92672"&gt;]&lt;/span&gt;.id
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;else&lt;/span&gt;&lt;span style="color:#f92672"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $pageId &lt;span style="color:#f92672"&gt;=&lt;/span&gt;-1
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; $itemArry
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description></item><item><title>Powershell</title><link>https://hens0n.github.io/notes/powershell/general/</link><pubDate>Tue, 17 May 2022 15:02:44 -0500</pubDate><guid>https://hens0n.github.io/notes/powershell/general/</guid><description>&lt;!-- Start Powershell --&gt;
+&lt;div class="note-card "&gt;
+&lt;div class="item"&gt;
+&lt;h5 class="note-title"&gt;&lt;span&gt;Start Powershell&lt;/span&gt;&lt;/h5&gt;
+&lt;div class="card"&gt;
+&lt;div class="card-body"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;powershell.exe -nop -exec bypass
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description></item></channel></rss>
